@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: DancingScript;
+    src: url(../font/DancingScript-VariableFont_wght.ttf);
+}
+
+.card{
+    width: 200px;
+    background-color: #ef1758;
+    padding: 24px 0;
+    margin: 120px auto;
+    border-radius: 8%;
+}
+
+.butterfly-card{
+    width: 144px;
+    height: 144px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 24px;
+    transition: box-shadow 2s;
+}
+
+.text{
+    width: 64px;
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    font-family: DancingScript;
+    font-size: 20px;
+}
+
+.text::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 2s;
+}
+
+.text:hover:after{
+    width: 100%;
+}
+
+.card:hover .text:after{
+    width: 100%;
+}
+
+.butterfly-card .butterfly-img{
+    filter: grayscale();
+    height: 144px;
+    margin: 0 -48px;
+    transition: filter 2s;
+} 
+
+.card:hover .butterfly-img{
+    filter: none;
+}
+
+.card:hover .butterfly-card{
+    box-shadow: 0 0 8px rgba(255, 126, 126, 0.22);
+}
